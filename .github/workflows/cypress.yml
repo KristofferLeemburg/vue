@@ -15,3 +15,4 @@ jobs:
           record: false
         env:
           CYPRESS_baseUrl: http://localhost:5173/
+          CYPRESS_VIDEO: false
