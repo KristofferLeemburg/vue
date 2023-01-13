@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: E2E tests:cypress
 on: [push]
 jobs:
   cypress-run:
@@ -10,8 +10,9 @@ jobs:
         uses: cypress-io/github-action@v3
         with:
           browser: chrome
-          start: npm run serve
-          wait-on: http://localhost:8080/
+          start: npm run dev
+          wait-on: http://localhost:5173/
           record: false
         env:
-          CYPRESS_baseUrl: http://localhost:8080/
+          CYPRESS_baseUrl: http://localhost:5173/
+          CYPRESS_VIDEO: false
