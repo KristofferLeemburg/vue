@@ -11,7 +11,7 @@ jobs:
         with:
           browser: chrome
           start: npm run serve
-          wait-on: http://localhost:8080/
+          wait-on: http://localhost:5173/
           record: false
         env:
-          CYPRESS_baseUrl: http://localhost:8080/
+          CYPRESS_baseUrl: http://localhost:5173/
