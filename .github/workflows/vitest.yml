@@ -1,0 +1,16 @@
+name: Vitest
+
+on: [pull_request]
+
+jobs:
+  check_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install packages
+        run: npm install
+        
+      - name: Test
+        run: npm run test:unit
